@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		00A24B802C42E3C200B00085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24B7F2C42E3C200B00085 /* AppDelegate.swift */; };
 		00A24B822C42E3C200B00085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24B812C42E3C200B00085 /* SceneDelegate.swift */; };
-		00A24B842C42E3C200B00085 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24B832C42E3C200B00085 /* ViewController.swift */; };
 		00A24B872C42E3C200B00085 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 00A24B862C42E3C200B00085 /* Base */; };
 		00A24B8A2C42E3C200B00085 /* Tendable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00A24B882C42E3C200B00085 /* Tendable.xcdatamodeld */; };
 		00A24B8C2C42E3C400B00085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00A24B8B2C42E3C400B00085 /* Assets.xcassets */; };
@@ -17,6 +16,7 @@
 		00A24B9A2C42E3C500B00085 /* TendableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24B992C42E3C500B00085 /* TendableTests.swift */; };
 		00A24BA42C42E3C500B00085 /* TendableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BA32C42E3C500B00085 /* TendableUITests.swift */; };
 		00A24BA62C42E3C500B00085 /* TendableUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BA52C42E3C500B00085 /* TendableUITestsLaunchTests.swift */; };
+		00A24BB82C42E52400B00085 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BB72C42E52400B00085 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		00A24B7C2C42E3C200B00085 /* Tendable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tendable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A24B7F2C42E3C200B00085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00A24B812C42E3C200B00085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		00A24B832C42E3C200B00085 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		00A24B862C42E3C200B00085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00A24B892C42E3C200B00085 /* Tendable.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tendable.xcdatamodel; sourceTree = "<group>"; };
 		00A24B8B2C42E3C400B00085 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		00A24B9F2C42E3C500B00085 /* TendableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TendableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A24BA32C42E3C500B00085 /* TendableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TendableUITests.swift; sourceTree = "<group>"; };
 		00A24BA52C42E3C500B00085 /* TendableUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TendableUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		00A24BB72C42E52400B00085 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,6 @@
 				00A24BB22C42E47200B00085 /* Model */,
 				00A24B7F2C42E3C200B00085 /* AppDelegate.swift */,
 				00A24B812C42E3C200B00085 /* SceneDelegate.swift */,
-				00A24B832C42E3C200B00085 /* ViewController.swift */,
 				00A24B852C42E3C200B00085 /* Main.storyboard */,
 				00A24B8B2C42E3C400B00085 /* Assets.xcassets */,
 				00A24B8D2C42E3C400B00085 /* LaunchScreen.storyboard */,
@@ -145,6 +144,7 @@
 		00A24BB32C42E47800B00085 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				00A24BB72C42E52400B00085 /* LoginViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,8 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A24BB82C42E52400B00085 /* LoginViewController.swift in Sources */,
 				00A24B8A2C42E3C200B00085 /* Tendable.xcdatamodeld in Sources */,
-				00A24B842C42E3C200B00085 /* ViewController.swift in Sources */,
 				00A24B802C42E3C200B00085 /* AppDelegate.swift in Sources */,
 				00A24B822C42E3C200B00085 /* SceneDelegate.swift in Sources */,
 			);
