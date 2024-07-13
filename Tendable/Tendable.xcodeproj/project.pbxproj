@@ -101,6 +101,11 @@
 		00A24B7E2C42E3C200B00085 /* Tendable */ = {
 			isa = PBXGroup;
 			children = (
+				00A24BB62C42E48800B00085 /* Utilities */,
+				00A24BB52C42E48200B00085 /* Services */,
+				00A24BB42C42E47C00B00085 /* ViewModel */,
+				00A24BB32C42E47800B00085 /* View */,
+				00A24BB22C42E47200B00085 /* Model */,
 				00A24B7F2C42E3C200B00085 /* AppDelegate.swift */,
 				00A24B812C42E3C200B00085 /* SceneDelegate.swift */,
 				00A24B832C42E3C200B00085 /* ViewController.swift */,
@@ -128,6 +133,41 @@
 				00A24BA52C42E3C500B00085 /* TendableUITestsLaunchTests.swift */,
 			);
 			path = TendableUITests;
+			sourceTree = "<group>";
+		};
+		00A24BB22C42E47200B00085 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00A24BB32C42E47800B00085 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00A24BB42C42E47C00B00085 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		00A24BB52C42E48200B00085 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		00A24BB62C42E48800B00085 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
