@@ -21,12 +21,17 @@ class LoginViewController: UIViewController {
     @IBAction func didSelectLoginButton(_ sender: Any) {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
 //        viewModel.login(email: "test@test.com", password: "test") { [weak self] result in
-        viewModel.login(email: email, password: password) { result in
-            switch result {
-            case .success:
-                print("Success")
-            case .failure(let error):
-                print("Failure")
+        viewModel.login(email: email, password: password) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let inspectionViewController = storyBoard.instantiateViewController(withIdentifier: InspectionViewController.identifier) as! InspectionViewController
+                    self?.navigationController?.pushViewController(inspectionViewController, animated: true)
+                    print("Success")
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
             }
         }
     }

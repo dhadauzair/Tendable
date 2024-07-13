@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b4I-K8-dkb">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -36,7 +36,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="oXy-RU-u2B" firstAttribute="top" secondItem="5G9-5a-VGf" secondAttribute="bottom" constant="30" id="5Kw-NL-w7O"/>
                             <constraint firstItem="yaV-UI-p2m" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9v2-hY-YUu"/>
@@ -48,6 +48,7 @@
                             <constraint firstItem="5G9-5a-VGf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ss6-iR-6ju"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1uQ-RC-9pe"/>
                     <connections>
                         <outlet property="emailTextField" destination="5G9-5a-VGf" id="Yk8-XV-Do1"/>
                         <outlet property="passwordTextField" destination="oXy-RU-u2B" id="NIy-df-oNe"/>
@@ -55,12 +56,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1012.9770992366412" y="-33.098591549295776"/>
+        </scene>
+        <!--Inspection View Controller-->
+        <scene sceneID="led-mh-Vn4">
+            <objects>
+                <viewController storyboardIdentifier="InspectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YkC-XE-qaY" customClass="InspectionViewController" customModule="Tendable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i72-wu-gUt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FgG-Ah-19S"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H8b-Zk-Nnq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958.0152671755725" y="-30.281690140845072"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uVK-Ig-Pp7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b4I-K8-dkb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="39E-YP-kZU">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fJX-61-Uxd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9M-b6-DK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="86.25954198473282" y="-33.098591549295776"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

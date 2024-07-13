@@ -15,7 +15,7 @@ final class APIBaseService {
     
     func request<T: Decodable>(_ endpoint: EndpointService, completion: @escaping (Result<T, Error>) -> Void) {
         var request = URLRequest(url: endpoint.url)
-        request.httpMethod = endpoint.httpMethod
+        request.httpMethod = endpoint.httpMethod.rawValue
         
         let session = URLSession.shared
         
@@ -31,6 +31,9 @@ final class APIBaseService {
                 return
             }
             
+            let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+            print("\nResponse:\n \(dataString ?? "Not found!")")
+            
             do {
                 let decoder = JSONDecoder()
                 let result = try decoder.decode(T.self, from: data)
@@ -45,7 +48,7 @@ final class APIBaseService {
     
     func request(_ endpoint: EndpointService, body: [String: Any], completion: @escaping (Result<Bool, Error>) -> Void) {
         var request = URLRequest(url: endpoint.url)
-        request.httpMethod = endpoint.httpMethod
+        request.httpMethod = endpoint.httpMethod.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         print("URL: \(endpoint.url)")
         print("HTTPMETHOD: \(endpoint.httpMethod)")

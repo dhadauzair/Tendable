@@ -22,6 +22,10 @@
 		00A24BC02C42F56A00B00085 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BBF2C42F56A00B00085 /* AuthenticationViewModel.swift */; };
 		00A24BC22C42F5A300B00085 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BC12C42F5A300B00085 /* User.swift */; };
 		00A24BC62C42F72B00B00085 /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BC52C42F72B00B00085 /* CodableExtensions.swift */; };
+		00A24BC82C4305E700B00085 /* InspectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BC72C4305E700B00085 /* InspectionViewController.swift */; };
+		00A24BCA2C43074600B00085 /* InspectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BC92C43074600B00085 /* InspectionViewModel.swift */; };
+		00A24BCC2C43089E00B00085 /* Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BCB2C43089E00B00085 /* Inspection.swift */; };
+		00A24BCE2C43130B00B00085 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BCD2C43130B00B00085 /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		00A24BBF2C42F56A00B00085 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		00A24BC12C42F5A300B00085 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		00A24BC52C42F72B00B00085 /* CodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
+		00A24BC72C4305E700B00085 /* InspectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionViewController.swift; sourceTree = "<group>"; };
+		00A24BC92C43074600B00085 /* InspectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionViewModel.swift; sourceTree = "<group>"; };
+		00A24BCB2C43089E00B00085 /* Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspection.swift; sourceTree = "<group>"; };
+		00A24BCD2C43130B00B00085 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				00A24BC12C42F5A300B00085 /* User.swift */,
+				00A24BCB2C43089E00B00085 /* Inspection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				00A24BB72C42E52400B00085 /* LoginViewController.swift */,
+				00A24BC72C4305E700B00085 /* InspectionViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				00A24BBF2C42F56A00B00085 /* AuthenticationViewModel.swift */,
+				00A24BC92C43074600B00085 /* InspectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -181,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				00A24BC52C42F72B00B00085 /* CodableExtensions.swift */,
+				00A24BCD2C43130B00B00085 /* UIViewControllerExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -316,14 +328,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A24BC82C4305E700B00085 /* InspectionViewController.swift in Sources */,
 				00A24BB82C42E52400B00085 /* LoginViewController.swift in Sources */,
 				00A24B8A2C42E3C200B00085 /* Tendable.xcdatamodeld in Sources */,
+				00A24BCE2C43130B00B00085 /* UIViewControllerExtensions.swift in Sources */,
 				00A24BC02C42F56A00B00085 /* AuthenticationViewModel.swift in Sources */,
 				00A24B802C42E3C200B00085 /* AppDelegate.swift in Sources */,
 				00A24BC22C42F5A300B00085 /* User.swift in Sources */,
 				00A24BBC2C42F24F00B00085 /* APIBaseService.swift in Sources */,
+				00A24BCC2C43089E00B00085 /* Inspection.swift in Sources */,
 				00A24BBE2C42F2CF00B00085 /* EndpointService.swift in Sources */,
 				00A24B822C42E3C200B00085 /* SceneDelegate.swift in Sources */,
+				00A24BCA2C43074600B00085 /* InspectionViewModel.swift in Sources */,
 				00A24BC62C42F72B00B00085 /* CodableExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

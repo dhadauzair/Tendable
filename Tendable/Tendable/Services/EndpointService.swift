@@ -7,18 +7,28 @@
 
 import Foundation
 
-enum Environment: String{
+enum Environment: String {
     case localHost = "http://localhost:5001"
     case localHost127 = "http://127.0.0.1:5001"
 }
 
+enum HTTPMethod: String {
+    case get = "GET"
+    case post = "POST"
+    case put = "PUT"
+    case delete = "DELETE"
+}
+
 enum EndpointService {
     case loginUser
+    case startInspection
     
     var urlString: String {
         switch self {
         case .loginUser:
             return APIBaseService.environment.rawValue + "/api/login"
+        case .startInspection:
+            return APIBaseService.environment.rawValue + "/api/inspections/start"
         }
     }
     
@@ -26,10 +36,12 @@ enum EndpointService {
         return URL(string: self.urlString)!
     }
     
-    var httpMethod: String {
+    var httpMethod: HTTPMethod {
         switch self {
         case .loginUser:
-            return "POST"
+            return .post
+        case .startInspection:
+            return .get
         }
     }
 }
