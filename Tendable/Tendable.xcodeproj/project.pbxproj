@@ -17,6 +17,11 @@
 		00A24BA42C42E3C500B00085 /* TendableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BA32C42E3C500B00085 /* TendableUITests.swift */; };
 		00A24BA62C42E3C500B00085 /* TendableUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BA52C42E3C500B00085 /* TendableUITestsLaunchTests.swift */; };
 		00A24BB82C42E52400B00085 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BB72C42E52400B00085 /* LoginViewController.swift */; };
+		00A24BBC2C42F24F00B00085 /* APIBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BBB2C42F24F00B00085 /* APIBaseService.swift */; };
+		00A24BBE2C42F2CF00B00085 /* EndpointService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BBD2C42F2CF00B00085 /* EndpointService.swift */; };
+		00A24BC02C42F56A00B00085 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BBF2C42F56A00B00085 /* AuthenticationViewModel.swift */; };
+		00A24BC22C42F5A300B00085 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BC12C42F5A300B00085 /* User.swift */; };
+		00A24BC62C42F72B00B00085 /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BC52C42F72B00B00085 /* CodableExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		00A24BA32C42E3C500B00085 /* TendableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TendableUITests.swift; sourceTree = "<group>"; };
 		00A24BA52C42E3C500B00085 /* TendableUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TendableUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00A24BB72C42E52400B00085 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		00A24BBB2C42F24F00B00085 /* APIBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBaseService.swift; sourceTree = "<group>"; };
+		00A24BBD2C42F2CF00B00085 /* EndpointService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointService.swift; sourceTree = "<group>"; };
+		00A24BBF2C42F56A00B00085 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		00A24BC12C42F5A300B00085 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		00A24BC52C42F72B00B00085 /* CodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +147,7 @@
 		00A24BB22C42E47200B00085 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				00A24BC12C42F5A300B00085 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +163,7 @@
 		00A24BB42C42E47C00B00085 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				00A24BBF2C42F56A00B00085 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -159,6 +171,8 @@
 		00A24BB52C42E48200B00085 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				00A24BBB2C42F24F00B00085 /* APIBaseService.swift */,
+				00A24BBD2C42F2CF00B00085 /* EndpointService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -166,6 +180,7 @@
 		00A24BB62C42E48800B00085 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				00A24BC52C42F72B00B00085 /* CodableExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -303,8 +318,13 @@
 			files = (
 				00A24BB82C42E52400B00085 /* LoginViewController.swift in Sources */,
 				00A24B8A2C42E3C200B00085 /* Tendable.xcdatamodeld in Sources */,
+				00A24BC02C42F56A00B00085 /* AuthenticationViewModel.swift in Sources */,
 				00A24B802C42E3C200B00085 /* AppDelegate.swift in Sources */,
+				00A24BC22C42F5A300B00085 /* User.swift in Sources */,
+				00A24BBC2C42F24F00B00085 /* APIBaseService.swift in Sources */,
+				00A24BBE2C42F2CF00B00085 /* EndpointService.swift in Sources */,
 				00A24B822C42E3C200B00085 /* SceneDelegate.swift in Sources */,
+				00A24BC62C42F72B00B00085 /* CodableExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
