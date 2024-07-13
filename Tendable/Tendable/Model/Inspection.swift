@@ -12,45 +12,57 @@ struct InspectionModel: Codable {
 }
 
 struct Inspection: Codable {
-    let id: Int?
-    let inspectionType: InspectionType?
-    let area: Area?
-    let survey: Survey?
+    var id: Int?
+    var inspectionType: InspectionType?
+    var area: Area?
+    var survey: Survey?
 }
 
 struct InspectionType: Codable {
-    let id: Int?
-    let name: String?
-    let access: String?
+    var id: Int?
+    var name: String?
+    var access: String?
 }
 
 struct Area: Codable {
-    let id: Int?
-    let name: String?
+    var id: Int?
+    var name: String?
 }
 
 struct Survey: Codable {
-    let id: Int?
-    let categories: [Category]?
+    var id: Int?
+    var categories: [Category]?
 }
 
 struct Category: Codable {
-    let id: Int?
-    let name: String?
-    let questions: [Question]?
+    var id: Int?
+    var name: String?
+    var questions: [Question]?
 }
 
 struct Question: Codable {
-    let id: Int?
-    let name: String?
-    let answerChoices: [AnswerChoice]?
+    var id: Int?
+    var name: String?
+    var answerChoices: [AnswerChoice]?
     var selectedAnswerChoiceId: Int?
 }
 
 struct AnswerChoice: Codable {
-    let id: Int?
-    let name: String?
-    let score: Float?
+    var id: Int?
+    var name: String?
+    var score: Float?
+    var isAnswerSelected = false
+    
+    enum CodingKeys: String, CodingKey {
+        case id, name, score
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(name, forKey: .name)
+        try container.encode(score, forKey: .score)
+    }
 }
 
 

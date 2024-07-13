@@ -58,7 +58,8 @@ extension InspectionViewController: UITableViewDelegate, UITableViewDataSource {
         let inspectionCategory = inspection?.survey?.categories?[indexPath.section]
         let question = inspectionCategory?.questions?[indexPath.row]
 
-        cell.configureCell(question: question?.name ?? "", answers: question?.answerChoices)
+        cell.configureCell(question: question?.name ?? "", answers: question?.answerChoices, indexPath: indexPath)
+        cell.delegate = self
         return cell
     }
     
@@ -68,5 +69,23 @@ extension InspectionViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+}
+
+// MARK: - InspectionQATableViewCellDelegate
+extension InspectionViewController: InspectionQATableViewCellDelegate {
+    func didSelectAnswer(_ answerId: Int, forQuestionAt indexPath: IndexPath) {
+        let newAnswerChoice = inspection?.survey?.categories?[indexPath.section].questions?[indexPath.row].answerChoices?.map({ answerChoice in
+            var modifiedAnswerChoice = answerChoice
+            if answerChoice.id == answerId {
+                modifiedAnswerChoice.isAnswerSelected = true
+            } else {
+                modifiedAnswerChoice.isAnswerSelected = false
+            }
+            return modifiedAnswerChoice
+        })
+        inspection?.survey?.categories?[indexPath.section].questions?[indexPath.row].answerChoices = newAnswerChoice
+        inspection?.survey?.categories?[indexPath.section].questions?[indexPath.row].selectedAnswerChoiceId = answerId
+        inspectionTableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
