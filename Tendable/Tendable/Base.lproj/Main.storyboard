@@ -76,11 +76,17 @@
                                 <rect key="frame" x="125.66666666666669" y="408.66666666666669" width="142" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="New Inspection"/>
+                                <connections>
+                                    <action selector="didSelectNewInspectionButton:" destination="92Z-lg-4dj" eventType="touchUpInside" id="8Eq-Vn-lFg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miT-Ya-70q">
                                 <rect key="frame" x="121.66666666666669" y="473.66666666666669" width="150" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Past Inspections"/>
+                                <connections>
+                                    <action selector="didSelectPastInspectionButton:" destination="92Z-lg-4dj" eventType="touchUpInside" id="aJP-K6-5z2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppd-bz-biq">
                                 <rect key="frame" x="158" y="783" width="77.333333333333314" height="35"/>
