@@ -16,6 +16,16 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !Utility.sharedInstance.getLoggedInUser().isEmpty {
+            showHomeView()
+        }
+    }
+    
+    func showHomeView() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let homeViewController = storyBoard.instantiateViewController(withIdentifier: HomeViewController.identifier) as! HomeViewController
+        self.navigationController?.pushViewController(homeViewController, animated: true)
     }
     
     @IBAction func didSelectLoginButton(_ sender: Any) {
@@ -28,9 +38,10 @@ class LoginViewController: UIViewController {
                     Utility.sharedInstance.saveLoggedInUser(emailId: self?.emailTextField.text ?? "")
                     CoreDataService.sharedInstance.saveUserEntity(userMailId: self?.emailTextField.text ?? "")
                     self?.showAlert(title:Constants.CommonLocalisations.appNameTitle, message: Constants.CommonLocalisations.loginSuccessTitle, actionTitle: nil) {
-                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                        let inspectionViewController = storyBoard.instantiateViewController(withIdentifier: InspectionViewController.identifier) as! InspectionViewController
-                        self?.navigationController?.pushViewController(inspectionViewController, animated: true)
+//                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//                        let inspectionViewController = storyBoard.instantiateViewController(withIdentifier: InspectionViewController.identifier) as! InspectionViewController
+//                        self?.navigationController?.pushViewController(inspectionViewController, animated: true)
+                        self?.showHomeView()
                     }
                     print("Success")
                 case .failure(let error):
