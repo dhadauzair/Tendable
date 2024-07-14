@@ -39,7 +39,7 @@ class InspectionQATableViewCell: UITableViewCell {
             button.setTitle(answer.name, for: .normal)
             button.tag = answer.id ?? answers.count+1
             if answer.isAnswerSelected {
-                button.backgroundColor = UIColor.systemBlue
+                button.backgroundColor = UIColor.lightGray
                 button.setTitleColor(UIColor.white, for: .normal)
             } else {
                 button.backgroundColor = UIColor.clear

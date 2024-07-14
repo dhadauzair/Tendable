@@ -36,6 +36,36 @@ class InspectionViewController: UIViewController {
             }
         }
     }
+    
+    func isAllQACompleted() -> Bool {
+        var isAllQuestionAnswered = true
+        inspection?.survey?.categories?.forEach({ category in
+            guard let questions = category.questions else { return }
+            questions.forEach { question in
+                if question.selectedAnswerChoiceId == nil {
+                    isAllQuestionAnswered = false
+                    return
+                }
+            }
+        })
+        
+        return isAllQuestionAnswered
+    }
+    
+    @IBAction func didSelctSubmitButton(_ sender: Any) {
+        if (isAllQACompleted()) {
+            let answeredInspectionModel = InspectionModel(inspection: inspection)
+            viewModel.submitInspection(selectedAnswerInspection: answeredInspectionModel) { [weak self] result in
+                switch result {
+                case .success:
+                    print("")
+                case .failure(let error):
+                    print("")
+                }
+            }
+        }
+    }
+    
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource

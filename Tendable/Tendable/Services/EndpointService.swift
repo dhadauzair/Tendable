@@ -22,6 +22,7 @@ enum HTTPMethod: String {
 enum EndpointService {
     case loginUser
     case startInspection
+    case submitInspection
     
     var urlString: String {
         switch self {
@@ -29,6 +30,8 @@ enum EndpointService {
             return APIBaseService.environment.rawValue + "/api/login"
         case .startInspection:
             return APIBaseService.environment.rawValue + "/api/inspections/start"
+        case .submitInspection:
+            return APIBaseService.environment.rawValue + "/api/inspections/submit"
         }
     }
     
@@ -38,7 +41,7 @@ enum EndpointService {
     
     var httpMethod: HTTPMethod {
         switch self {
-        case .loginUser:
+        case .loginUser, .submitInspection:
             return .post
         case .startInspection:
             return .get

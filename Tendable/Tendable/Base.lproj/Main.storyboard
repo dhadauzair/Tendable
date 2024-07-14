@@ -67,7 +67,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ypR-gA-ts0">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="714.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InspectionQATableViewCell" rowHeight="72" id="X7W-Pb-R5b" customClass="InspectionQATableViewCell" customModule="Tendable" customModuleProvider="target">
@@ -108,14 +108,24 @@
                                     <outlet property="delegate" destination="YkC-XE-qaY" id="I0c-Rs-Q9L"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GF3-Yg-Aoj">
+                                <rect key="frame" x="157.66666666666666" y="783.66666666666663" width="78" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                <connections>
+                                    <action selector="didSelctSubmitButton:" destination="YkC-XE-qaY" eventType="touchUpInside" id="XSQ-EO-bUl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FgG-Ah-19S"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="GF3-Yg-Aoj" firstAttribute="centerX" secondItem="FgG-Ah-19S" secondAttribute="centerX" id="4rK-3L-TT1"/>
                             <constraint firstItem="ypR-gA-ts0" firstAttribute="leading" secondItem="FgG-Ah-19S" secondAttribute="leading" id="a85-oI-Rd9"/>
                             <constraint firstItem="FgG-Ah-19S" firstAttribute="trailing" secondItem="ypR-gA-ts0" secondAttribute="trailing" id="bXZ-cH-qkb"/>
-                            <constraint firstItem="FgG-Ah-19S" firstAttribute="bottom" secondItem="ypR-gA-ts0" secondAttribute="bottom" id="mX8-HY-X9Z"/>
+                            <constraint firstItem="GF3-Yg-Aoj" firstAttribute="top" secondItem="ypR-gA-ts0" secondAttribute="bottom" constant="10" id="bcC-jJ-fld"/>
                             <constraint firstItem="ypR-gA-ts0" firstAttribute="top" secondItem="FgG-Ah-19S" secondAttribute="top" id="sKS-Ga-nv1"/>
+                            <constraint firstItem="GF3-Yg-Aoj" firstAttribute="bottom" secondItem="FgG-Ah-19S" secondAttribute="bottom" id="xPg-JP-6Bj"/>
                         </constraints>
                     </view>
                     <connections>
