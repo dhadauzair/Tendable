@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002E62662C442FA800BD37E6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E62652C442FA800BD37E6 /* HomeViewController.swift */; };
 		00A24B802C42E3C200B00085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24B7F2C42E3C200B00085 /* AppDelegate.swift */; };
 		00A24B822C42E3C200B00085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24B812C42E3C200B00085 /* SceneDelegate.swift */; };
 		00A24B872C42E3C200B00085 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 00A24B862C42E3C200B00085 /* Base */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		002E62652C442FA800BD37E6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		00A24B7C2C42E3C200B00085 /* Tendable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tendable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A24B7F2C42E3C200B00085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00A24B812C42E3C200B00085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				00A24BB72C42E52400B00085 /* LoginViewController.swift */,
 				00A24BC72C4305E700B00085 /* InspectionViewController.swift */,
 				00A24BD32C43253F00B00085 /* InspectionQATableViewCell.swift */,
+				002E62652C442FA800BD37E6 /* HomeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				00A24BD02C431D0700B00085 /* UITableViewCellExtensions.swift in Sources */,
 				00A24BCE2C43130B00B00085 /* UIViewControllerExtensions.swift in Sources */,
 				00A24BC02C42F56A00B00085 /* AuthenticationViewModel.swift in Sources */,
+				002E62662C442FA800BD37E6 /* HomeViewController.swift in Sources */,
 				00A24B802C42E3C200B00085 /* AppDelegate.swift in Sources */,
 				00A24BC22C42F5A300B00085 /* User.swift in Sources */,
 				00A24BBC2C42F24F00B00085 /* APIBaseService.swift in Sources */,
