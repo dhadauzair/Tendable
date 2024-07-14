@@ -86,8 +86,7 @@ class InspectionViewController: UIViewController {
                     switch result {
                     case .success:
                         self?.showAlert(title: Constants.CommonLocalisations.appNameTitle, message: Constants.CommonLocalisations.totalScore + "\(self?.calculateInspectionScore() ?? 0.0)", actionTitle: nil)
-                    case .failure(let error):
-                        print("")
+                    case .failure(_): break
                     }
                 }
             }

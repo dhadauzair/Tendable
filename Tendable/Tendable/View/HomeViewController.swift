@@ -32,5 +32,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func didSelectPastInspectionButton(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let pastInspectionListViewController = storyBoard.instantiateViewController(withIdentifier: PastInspectionListViewController.identifier) as! PastInspectionListViewController
+        self.navigationController?.pushViewController(pastInspectionListViewController, animated: true)
     }
 }

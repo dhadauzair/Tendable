@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		002E62662C442FA800BD37E6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E62652C442FA800BD37E6 /* HomeViewController.swift */; };
+		002E62682C44534E00BD37E6 /* PastInspectionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E62672C44534E00BD37E6 /* PastInspectionListViewController.swift */; };
+		002E626A2C44536400BD37E6 /* PastInspectionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E62692C44536400BD37E6 /* PastInspectionListViewModel.swift */; };
 		00A24B802C42E3C200B00085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24B7F2C42E3C200B00085 /* AppDelegate.swift */; };
 		00A24B822C42E3C200B00085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24B812C42E3C200B00085 /* SceneDelegate.swift */; };
 		00A24B872C42E3C200B00085 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 00A24B862C42E3C200B00085 /* Base */; };
@@ -56,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		002E62652C442FA800BD37E6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		002E62672C44534E00BD37E6 /* PastInspectionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastInspectionListViewController.swift; sourceTree = "<group>"; };
+		002E62692C44536400BD37E6 /* PastInspectionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastInspectionListViewModel.swift; sourceTree = "<group>"; };
 		00A24B7C2C42E3C200B00085 /* Tendable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tendable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A24B7F2C42E3C200B00085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00A24B812C42E3C200B00085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				00A24BC72C4305E700B00085 /* InspectionViewController.swift */,
 				00A24BD32C43253F00B00085 /* InspectionQATableViewCell.swift */,
 				002E62652C442FA800BD37E6 /* HomeViewController.swift */,
+				002E62672C44534E00BD37E6 /* PastInspectionListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 			children = (
 				00A24BBF2C42F56A00B00085 /* AuthenticationViewModel.swift */,
 				00A24BC92C43074600B00085 /* InspectionViewModel.swift */,
+				002E62692C44536400BD37E6 /* PastInspectionListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 				00A24BB82C42E52400B00085 /* LoginViewController.swift in Sources */,
 				00A24B8A2C42E3C200B00085 /* Tendable.xcdatamodeld in Sources */,
 				00A24BD02C431D0700B00085 /* UITableViewCellExtensions.swift in Sources */,
+				002E62682C44534E00BD37E6 /* PastInspectionListViewController.swift in Sources */,
 				00A24BCE2C43130B00B00085 /* UIViewControllerExtensions.swift in Sources */,
 				00A24BC02C42F56A00B00085 /* AuthenticationViewModel.swift in Sources */,
 				002E62662C442FA800BD37E6 /* HomeViewController.swift in Sources */,
@@ -378,6 +385,7 @@
 				00B775712C43BE590063BAAF /* TendableUserEntity+CoreDataClass.swift in Sources */,
 				00B775722C43BE590063BAAF /* TendableUserEntity+CoreDataProperties.swift in Sources */,
 				00A24BD42C43253F00B00085 /* InspectionQATableViewCell.swift in Sources */,
+				002E626A2C44536400BD37E6 /* PastInspectionListViewModel.swift in Sources */,
 				00A24BBE2C42F2CF00B00085 /* EndpointService.swift in Sources */,
 				00B775742C43BFFA0063BAAF /* NSManagedObjectExtensions.swift in Sources */,
 				00B775652C43AE8D0063BAAF /* Utility.swift in Sources */,

@@ -197,6 +197,40 @@
             </objects>
             <point key="canvasLocation" x="2639" y="-33"/>
         </scene>
+        <!--Past Inspection List View Controller-->
+        <scene sceneID="M1U-nO-nJI">
+            <objects>
+                <viewController storyboardIdentifier="PastInspectionListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QTb-NB-aHn" customClass="PastInspectionListViewController" customModule="Tendable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mta-c9-S5u">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lb5-ZT-a6g">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QTb-NB-aHn" id="6Jr-03-aI8"/>
+                                    <outlet property="delegate" destination="QTb-NB-aHn" id="kYa-LL-Oma"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oYH-vz-Zht"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oYH-vz-Zht" firstAttribute="bottom" secondItem="Lb5-ZT-a6g" secondAttribute="bottom" id="5cT-uA-WeI"/>
+                            <constraint firstItem="Lb5-ZT-a6g" firstAttribute="top" secondItem="oYH-vz-Zht" secondAttribute="top" id="XPB-B0-Htm"/>
+                            <constraint firstItem="oYH-vz-Zht" firstAttribute="trailing" secondItem="Lb5-ZT-a6g" secondAttribute="trailing" id="gye-J0-Cpp"/>
+                            <constraint firstItem="Lb5-ZT-a6g" firstAttribute="leading" secondItem="oYH-vz-Zht" secondAttribute="leading" id="lvG-LL-fNp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pastInspectionListTableView" destination="Lb5-ZT-a6g" id="2tW-1I-YZY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ipb-oR-ev2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3409" y="-23"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="uVK-Ig-Pp7">
             <objects>

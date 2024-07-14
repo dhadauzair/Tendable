@@ -23,6 +23,7 @@ enum EndpointService {
     case loginUser
     case startInspection
     case submitInspection
+    case randomInspections
     
     var urlString: String {
         switch self {
@@ -32,6 +33,8 @@ enum EndpointService {
             return APIBaseService.environment.rawValue + "/api/inspections/start"
         case .submitInspection:
             return APIBaseService.environment.rawValue + "/api/inspections/submit"
+        case .randomInspections:
+            return APIBaseService.environment.rawValue + "/api/generate_random_inspections/"
         }
     }
     
@@ -43,7 +46,7 @@ enum EndpointService {
         switch self {
         case .loginUser, .submitInspection:
             return .post
-        case .startInspection:
+        case .startInspection, .randomInspections:
             return .get
         }
     }
