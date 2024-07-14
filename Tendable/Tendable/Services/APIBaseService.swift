@@ -13,88 +13,60 @@ final class APIBaseService {
     
     private init() {}
     
-    func request<T: Decodable>(_ endpoint: EndpointService, completion: @escaping (Result<T, Error>) -> Void) {
-        var request = URLRequest(url: endpoint.url)
-        request.httpMethod = endpoint.httpMethod.rawValue
+    func request<T: Decodable>(_ endpoint: EndpointService, body: [String: Any] = [:], completion: @escaping (Result<T, Error>) -> Void) {
         
-        let session = URLSession.shared
-        
-        let task = session.dataTask(with: request) { data, response, error in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            guard let data = data else {
-                let error = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey : "Data Not Available"])
-                completion(.failure(error))
-                return
-            }
-            
-            let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
-            print("\nResponse:\n \(dataString ?? "Not found!")")
-            
-            do {
-                let decoder = JSONDecoder()
-                let result = try decoder.decode(T.self, from: data)
-                completion(.success(result))
-            } catch let decodingError {
-                completion(.failure(decodingError))
-            }
-        }
-        
-        task.resume()
-    }
-    
-    func request(_ endpoint: EndpointService, body: [String: Any], completion: @escaping (Result<Bool, Error>) -> Void) {
         var request = URLRequest(url: endpoint.url)
         request.httpMethod = endpoint.httpMethod.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         print("URL: \(endpoint.url)")
-        print("HTTPMETHOD: \(endpoint.httpMethod)")
+        print("HTTPMETHOD: \(endpoint.httpMethod.rawValue)")
         print("HEADER: \(String(describing: request.allHTTPHeaderFields))")
         print("BODY: \(body)")
         
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
-        } catch {
-            print("Failed to serialize JSON")
-            return
-        }
-        
         let session = URLSession.shared
+        if !body.isEmpty {
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
+            } catch {
+                print("Failed to serialize JSON")
+                return
+            }
+        }
         
         let task = session.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.failure(error))
                 return
             }
-            
-            guard let data = data else {
-                let error = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey : "Data Not Available"])
-                completion(.failure(error))
-                return
-            }
-            
             guard let httpResponse = response as? HTTPURLResponse else {
-                print("Invalid response")
+                completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid response"])))
                 return
             }
             
             if (200...299).contains(httpResponse.statusCode) {
-                completion(.success(true))
-            } else {
-                do {
-                    let errorMessage = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                    let error = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey : errorMessage ?? "Unknown Error"])
-                    completion(.failure(error))
-                    print("Server error: \(String(describing: errorMessage))")
-                } catch {
-                    let error = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey : "Server Error"])
-                    completion(.failure(error))
+                if let data = data, data.count > 0 {
+                    do {
+                        let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+                        completion(.success(decodedResponse))
+                    } catch {
+                        completion(.failure(error))
+                    }
+                } else {
+                    // If there is no data but the status code indicates success
+                    if T.self == BoolResponse.self {
+                        completion(.success(BoolResponse(success: true) as! T))
+                    } else {
+                        completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data received"])))
+                    }
                 }
+            } else {
+                completion(.failure(NSError(domain: "", code: httpResponse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Request failed with status code \(httpResponse.statusCode)"])))
             }
         }
         task.resume()
     }
+}
+
+struct BoolResponse: Codable {
+    let success: Bool
 }

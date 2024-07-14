@@ -12,7 +12,7 @@ class InspectionViewModel {
         APIBaseService.shared.request(.startInspection, completion: completion)
     }
     
-    func submitInspection(selectedAnswerInspection: InspectionModel, completion: @escaping (Result<Bool, Error>) -> Void) {
+    func submitInspection(selectedAnswerInspection: InspectionModel, completion: @escaping (Result<BoolResponse, Error>) -> Void) {
         let selectedAnswerInspectionDictinary = selectedAnswerInspection.dictionary ?? [:]
         APIBaseService.shared.request(.submitInspection, body: selectedAnswerInspectionDictinary, completion: completion)
     }

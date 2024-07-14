@@ -28,6 +28,12 @@
 		00A24BCE2C43130B00B00085 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BCD2C43130B00B00085 /* UIViewControllerExtensions.swift */; };
 		00A24BD02C431D0700B00085 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BCF2C431D0700B00085 /* UITableViewCellExtensions.swift */; };
 		00A24BD42C43253F00B00085 /* InspectionQATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BD32C43253F00B00085 /* InspectionQATableViewCell.swift */; };
+		00B775652C43AE8D0063BAAF /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B775642C43AE8D0063BAAF /* Utility.swift */; };
+		00B775672C43AFD90063BAAF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B775662C43AFD90063BAAF /* Constants.swift */; };
+		00B775692C43B3850063BAAF /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B775682C43B3850063BAAF /* CoreDataService.swift */; };
+		00B775712C43BE590063BAAF /* TendableUserEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7756F2C43BE590063BAAF /* TendableUserEntity+CoreDataClass.swift */; };
+		00B775722C43BE590063BAAF /* TendableUserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B775702C43BE590063BAAF /* TendableUserEntity+CoreDataProperties.swift */; };
+		00B775742C43BFFA0063BAAF /* NSManagedObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B775732C43BFFA0063BAAF /* NSManagedObjectExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +79,12 @@
 		00A24BCD2C43130B00B00085 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		00A24BCF2C431D0700B00085 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
 		00A24BD32C43253F00B00085 /* InspectionQATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionQATableViewCell.swift; sourceTree = "<group>"; };
+		00B775642C43AE8D0063BAAF /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		00B775662C43AFD90063BAAF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		00B775682C43B3850063BAAF /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		00B7756F2C43BE590063BAAF /* TendableUserEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TendableUserEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		00B775702C43BE590063BAAF /* TendableUserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TendableUserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		00B775732C43BFFA0063BAAF /* NSManagedObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +171,7 @@
 		00A24BB22C42E47200B00085 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				00B7756E2C43BD110063BAAF /* NSManagedObjectSubclasses */,
 				00A24BC12C42F5A300B00085 /* User.swift */,
 				00A24BCB2C43089E00B00085 /* Inspection.swift */,
 			);
@@ -189,6 +202,7 @@
 			children = (
 				00A24BBB2C42F24F00B00085 /* APIBaseService.swift */,
 				00A24BBD2C42F2CF00B00085 /* EndpointService.swift */,
+				00B775682C43B3850063BAAF /* CoreDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -199,8 +213,20 @@
 				00A24BC52C42F72B00B00085 /* CodableExtensions.swift */,
 				00A24BCD2C43130B00B00085 /* UIViewControllerExtensions.swift */,
 				00A24BCF2C431D0700B00085 /* UITableViewCellExtensions.swift */,
+				00B775642C43AE8D0063BAAF /* Utility.swift */,
+				00B775662C43AFD90063BAAF /* Constants.swift */,
+				00B775732C43BFFA0063BAAF /* NSManagedObjectExtensions.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		00B7756E2C43BD110063BAAF /* NSManagedObjectSubclasses */ = {
+			isa = PBXGroup;
+			children = (
+				00B7756F2C43BE590063BAAF /* TendableUserEntity+CoreDataClass.swift */,
+				00B775702C43BE590063BAAF /* TendableUserEntity+CoreDataProperties.swift */,
+			);
+			path = NSManagedObjectSubclasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00A24BC82C4305E700B00085 /* InspectionViewController.swift in Sources */,
+				00B775672C43AFD90063BAAF /* Constants.swift in Sources */,
 				00A24BB82C42E52400B00085 /* LoginViewController.swift in Sources */,
 				00A24B8A2C42E3C200B00085 /* Tendable.xcdatamodeld in Sources */,
 				00A24BD02C431D0700B00085 /* UITableViewCellExtensions.swift in Sources */,
@@ -344,10 +371,15 @@
 				00A24BC22C42F5A300B00085 /* User.swift in Sources */,
 				00A24BBC2C42F24F00B00085 /* APIBaseService.swift in Sources */,
 				00A24BCC2C43089E00B00085 /* Inspection.swift in Sources */,
+				00B775712C43BE590063BAAF /* TendableUserEntity+CoreDataClass.swift in Sources */,
+				00B775722C43BE590063BAAF /* TendableUserEntity+CoreDataProperties.swift in Sources */,
 				00A24BD42C43253F00B00085 /* InspectionQATableViewCell.swift in Sources */,
 				00A24BBE2C42F2CF00B00085 /* EndpointService.swift in Sources */,
+				00B775742C43BFFA0063BAAF /* NSManagedObjectExtensions.swift in Sources */,
+				00B775652C43AE8D0063BAAF /* Utility.swift in Sources */,
 				00A24B822C42E3C200B00085 /* SceneDelegate.swift in Sources */,
 				00A24BCA2C43074600B00085 /* InspectionViewModel.swift in Sources */,
+				00B775692C43B3850063BAAF /* CoreDataService.swift in Sources */,
 				00A24BC62C42F72B00B00085 /* CodableExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

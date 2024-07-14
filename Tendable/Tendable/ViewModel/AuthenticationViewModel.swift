@@ -9,7 +9,7 @@ import Foundation
 
 class AuthenticationViewModel {
     
-    func login(email: String, password: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+    func login(email: String, password: String, completion: @escaping (Result<BoolResponse, Error>) -> Void) {
         let user = User(email: email, password: password)
         guard let dictionaryValues = user.dictionary else {
             print("Unable to convert User to Dictionary in AuthenticationViewModel: login")

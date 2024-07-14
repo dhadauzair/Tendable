@@ -25,9 +25,13 @@ class LoginViewController: UIViewController {
             DispatchQueue.main.async {
                 switch result {
                 case .success:
-                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                    let inspectionViewController = storyBoard.instantiateViewController(withIdentifier: InspectionViewController.identifier) as! InspectionViewController
-                    self?.navigationController?.pushViewController(inspectionViewController, animated: true)
+                    Utility.sharedInstance.saveLoggedInUser(emailId: self?.emailTextField.text ?? "")
+                    CoreDataService.sharedInstance.saveUserEntity(userMailId: self?.emailTextField.text ?? "")
+                    self?.showAlert(title:Constants.CommonLocalisations.appNameTitle, message: Constants.CommonLocalisations.loginSuccessTitle, actionTitle: nil) {
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        let inspectionViewController = storyBoard.instantiateViewController(withIdentifier: InspectionViewController.identifier) as! InspectionViewController
+                        self?.navigationController?.pushViewController(inspectionViewController, animated: true)
+                    }
                     print("Success")
                 case .failure(let error):
                     print(error.localizedDescription)
