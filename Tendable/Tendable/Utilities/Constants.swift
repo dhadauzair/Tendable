@@ -16,5 +16,6 @@ class Constants {
         static let okTitle = "Ok"
         static let appNameTitle = "Tendable"
         static let loginSuccessTitle = "Login Success."
+        static let totalScore = "Total Score:"
     }
 }

@@ -21,12 +21,14 @@ final class APIBaseService {
         print("URL: \(endpoint.url)")
         print("HTTPMETHOD: \(endpoint.httpMethod.rawValue)")
         print("HEADER: \(String(describing: request.allHTTPHeaderFields))")
-        print("BODY: \(body)")
         
         let session = URLSession.shared
         if !body.isEmpty {
             do {
                 request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
+                // print parameters
+                let dataString = NSString(data: request.httpBody!, encoding: String.Encoding.utf8.rawValue)
+                print("\nParameters:\n \(dataString ?? "Not found!")")
             } catch {
                 print("Failed to serialize JSON")
                 return

@@ -50,7 +50,7 @@ struct Question: Codable {
 struct AnswerChoice: Codable {
     var id: Int?
     var name: String?
-    var score: Float?
+    var score: Double?
     var isAnswerSelected = false
     
     enum CodingKeys: String, CodingKey {

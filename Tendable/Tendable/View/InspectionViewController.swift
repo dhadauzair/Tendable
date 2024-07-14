@@ -52,15 +52,42 @@ class InspectionViewController: UIViewController {
         return isAllQuestionAnswered
     }
     
+    func calculateInspectionScore() -> Double {
+        guard let categories = inspection?.survey?.categories else {
+            return 0.0
+        }
+
+        let questions = extractQuestions(from: categories)
+        let scores = calculateScores(for: questions)
+        return sumScores(scores)
+    }
+
+    func extractQuestions(from categories: [Category]) -> [Question] {
+        return categories.flatMap { $0.questions ?? [] }
+    }
+
+    func calculateScores(for questions: [Question]) -> [Double] {
+        return questions.compactMap { question in
+            question.answerChoices?.first(where: { $0.id == question.selectedAnswerChoiceId })?.score
+        }
+    }
+
+    func sumScores(_ scores: [Double]) -> Double {
+        return scores.reduce(0.0, +)
+    }
+
+    
     @IBAction func didSelctSubmitButton(_ sender: Any) {
         if (isAllQACompleted()) {
             let answeredInspectionModel = InspectionModel(inspection: inspection)
             viewModel.submitInspection(selectedAnswerInspection: answeredInspectionModel) { [weak self] result in
-                switch result {
-                case .success:
-                    print("")
-                case .failure(let error):
-                    print("")
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success:
+                        self?.showAlert(title: Constants.CommonLocalisations.appNameTitle, message: Constants.CommonLocalisations.totalScore + "\(self?.calculateInspectionScore() ?? 0.0)", actionTitle: nil)
+                    case .failure(let error):
+                        print("")
+                    }
                 }
             }
         }
