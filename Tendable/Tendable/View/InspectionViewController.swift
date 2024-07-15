@@ -85,7 +85,11 @@ class InspectionViewController: UIViewController {
                 DispatchQueue.main.async {
                     switch result {
                     case .success:
+                        CoreDataService.sharedInstance.saveInspectionsEntity(userMailId: Utility.sharedInstance.getLoggedInUser(), inspection: self?.inspection ?? Inspection())
                         self?.showAlert(title: Constants.CommonLocalisations.appNameTitle, message: Constants.CommonLocalisations.totalScore + "\(self?.calculateInspectionScore() ?? 0.0)", actionTitle: nil)
+                        if let firstInspection = CoreDataService.sharedInstance.getInspections(Utility.sharedInstance.getLoggedInUser())?.first {
+                            _ = CoreDataService.sharedInstance.getInspectionFromInspectionEntity(inspectionEntity: firstInspection)
+                        }
                     case .failure(_): break
                     }
                 }

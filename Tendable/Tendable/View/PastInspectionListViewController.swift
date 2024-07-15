@@ -23,7 +23,7 @@ class PastInspectionListViewController: UIViewController {
     }
     
     func getPastInspections() {
-        viewModel.getPastInspections { [weak self] result in
+        viewModel.getPastInspections { result in
             switch result {
             case .success(_):
                 print("")

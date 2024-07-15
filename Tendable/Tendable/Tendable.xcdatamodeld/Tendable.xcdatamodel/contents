@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="TendableUserEntity" representedClassName="TendableUserEntity" syncable="YES">
+    <entity name="TendableAnswerChoicesEntity" representedClassName="TendableAnswerChoicesEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="score" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TendableQuestionsEntity" inverseName="answerChoices" inverseEntity="TendableQuestionsEntity"/>
+    </entity>
+    <entity name="TendableAreaEntity" representedClassName="TendableAreaEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="inspection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TendableInspectionsEntity" inverseName="area" inverseEntity="TendableInspectionsEntity"/>
+    </entity>
+    <entity name="TendableCategoriesEntity" representedClassName="TendableCategoriesEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TendableQuestionsEntity" inverseName="categories" inverseEntity="TendableQuestionsEntity"/>
+        <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TendableSurveyEntity" inverseName="categories" inverseEntity="TendableSurveyEntity"/>
+    </entity>
+    <entity name="TendableInspectionsEntity" representedClassName="TendableInspectionsEntity" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="area" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TendableAreaEntity" inverseName="inspection" inverseEntity="TendableAreaEntity"/>
+        <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TendableSurveyEntity" inverseName="inspection" inverseEntity="TendableSurveyEntity"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TendableInspectionTypeEntity" inverseName="inspection" inverseEntity="TendableInspectionTypeEntity"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TendableUserEntity" inverseName="inspection" inverseEntity="TendableUserEntity"/>
+    </entity>
+    <entity name="TendableInspectionTypeEntity" representedClassName="TendableInspectionTypeEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="access" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="inspection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TendableInspectionsEntity" inverseName="type" inverseEntity="TendableInspectionsEntity"/>
+    </entity>
+    <entity name="TendableQuestionsEntity" representedClassName="TendableQuestionsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="selectedAnswerChoiceId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="answerChoices" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TendableAnswerChoicesEntity" inverseName="questions" inverseEntity="TendableAnswerChoicesEntity"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TendableCategoriesEntity" inverseName="questions" inverseEntity="TendableCategoriesEntity"/>
+    </entity>
+    <entity name="TendableSurveyEntity" representedClassName="TendableSurveyEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TendableCategoriesEntity" inverseName="survey" inverseEntity="TendableCategoriesEntity"/>
+        <relationship name="inspection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TendableInspectionsEntity" inverseName="survey" inverseEntity="TendableInspectionsEntity"/>
+    </entity>
+    <entity name="TendableUserEntity" representedClassName="TendableUserEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <relationship name="inspection" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TendableInspectionsEntity" inverseName="user" inverseEntity="TendableInspectionsEntity"/>
     </entity>
 </model>
