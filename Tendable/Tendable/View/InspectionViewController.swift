@@ -86,7 +86,9 @@ class InspectionViewController: UIViewController {
                     switch result {
                     case .success:
                         CoreDataService.sharedInstance.saveInspectionsEntity(userMailId: Utility.sharedInstance.getLoggedInUser(), inspection: self?.inspection ?? Inspection())
-                        self?.showAlert(title: Constants.CommonLocalisations.appNameTitle, message: Constants.CommonLocalisations.totalScore + "\(self?.calculateInspectionScore() ?? 0.0)", actionTitle: nil)
+                        self?.showAlert(title: Constants.CommonLocalisations.appNameTitle, message: Constants.CommonLocalisations.totalScore + "\(self?.calculateInspectionScore() ?? 0.0)", actionTitle: nil, completion: {
+                            self?.navigationController?.popViewController(animated: true)
+                        })
                     case .failure(_): break
                     }
                 }
