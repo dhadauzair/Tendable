@@ -85,6 +85,7 @@ class InspectionViewController: UIViewController {
                 DispatchQueue.main.async {
                     switch result {
                     case .success:
+                        self?.inspection?.isSubmitted = true
                         CoreDataService.sharedInstance.saveInspectionsEntity(userMailId: Utility.sharedInstance.getLoggedInUser(), inspection: self?.inspection ?? Inspection())
                         self?.showAlert(title: Constants.CommonLocalisations.appNameTitle, message: Constants.CommonLocalisations.totalScore + "\(self?.calculateInspectionScore() ?? 0.0)", actionTitle: nil, completion: {
                             self?.navigationController?.popViewController(animated: true)
@@ -97,6 +98,10 @@ class InspectionViewController: UIViewController {
     }
     
     @IBAction func didSelectSaveDraftButton(_ sender: Any) {
+        CoreDataService.sharedInstance.saveInspectionsEntity(userMailId: Utility.sharedInstance.getLoggedInUser(), inspection: self.inspection ?? Inspection())
+        self.showAlert(title: Constants.CommonLocalisations.appNameTitle, message: "Draft Inspection Saved. You can access from past inspection ", actionTitle: Constants.CommonLocalisations.okTitle, completion: {
+            self.navigationController?.popViewController(animated: true)
+        })
     }
     
     

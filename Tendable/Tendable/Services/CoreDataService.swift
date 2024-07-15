@@ -91,6 +91,7 @@ final class CoreDataService: NSObject {
     func createInspectionEntity(inspection: Inspection) -> TendableInspectionsEntity {
         let inspectionEntity = TendableInspectionsEntity(context: context)
         inspectionEntity.id = Int64(inspection.id ?? 0)
+        inspectionEntity.isSubmitted = inspection.isSubmitted
         return inspectionEntity
     }
 
@@ -168,6 +169,7 @@ final class CoreDataService: NSObject {
     func getInspectionFromInspectionEntity(inspectionEntity: TendableInspectionsEntity) -> Inspection {
         var cInspection = Inspection()
         cInspection.id = Int(inspectionEntity.id)
+        cInspection.isSubmitted = inspectionEntity.isSubmitted
         cInspection.inspectionType = getInspectionType(from: inspectionEntity.type)
         cInspection.area = getArea(from: inspectionEntity.area)
         cInspection.survey = getSurvey(from: inspectionEntity.survey)

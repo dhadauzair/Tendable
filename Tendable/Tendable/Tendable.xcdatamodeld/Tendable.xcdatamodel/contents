@@ -20,6 +20,7 @@
     <entity name="TendableInspectionsEntity" representedClassName="TendableInspectionsEntity" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isSubmitted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <relationship name="area" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TendableAreaEntity" inverseName="inspection" inverseEntity="TendableAreaEntity"/>
         <relationship name="survey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TendableSurveyEntity" inverseName="inspection" inverseEntity="TendableSurveyEntity"/>
         <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TendableInspectionTypeEntity" inverseName="inspection" inverseEntity="TendableInspectionTypeEntity"/>

@@ -16,6 +16,19 @@ struct Inspection: Codable {
     var inspectionType: InspectionType?
     var area: Area?
     var survey: Survey?
+    var isSubmitted = false
+    
+    enum CodingKeys: String, CodingKey {
+        case id, inspectionType, area, survey
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(id, forKey: .id)
+        try container.encodeIfPresent(inspectionType, forKey: .inspectionType)
+        try container.encodeIfPresent(area, forKey: .area)
+        try container.encodeIfPresent(survey, forKey: .survey)
+    }
 }
 
 struct InspectionType: Codable {
@@ -59,9 +72,9 @@ struct AnswerChoice: Codable {
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(id, forKey: .id)
-        try container.encode(name, forKey: .name)
-        try container.encode(score, forKey: .score)
+        try container.encodeIfPresent(id, forKey: .id)
+        try container.encodeIfPresent(name, forKey: .name)
+        try container.encodeIfPresent(score, forKey: .score)
     }
 }
 
