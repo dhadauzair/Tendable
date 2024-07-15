@@ -32,8 +32,12 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func didSelectPastInspectionButton(_ sender: Any) {
+        let pastInspectionsEntity = CoreDataService.sharedInstance.getInspectionsEntity(Utility.sharedInstance.getLoggedInUser())
+        guard let pastInspectionsEntity = pastInspectionsEntity else { return }
+        let pastSavedInspection = CoreDataService.sharedInstance.getAllSavedInspections(inspectionEntity: pastInspectionsEntity)
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let pastInspectionListViewController = storyBoard.instantiateViewController(withIdentifier: PastInspectionListViewController.identifier) as! PastInspectionListViewController
+        pastInspectionListViewController.pastSavedInspections = pastSavedInspection
         self.navigationController?.pushViewController(pastInspectionListViewController, animated: true)
     }
 }

@@ -35,6 +35,7 @@
 		00B775672C43AFD90063BAAF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B775662C43AFD90063BAAF /* Constants.swift */; };
 		00B775692C43B3850063BAAF /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B775682C43B3850063BAAF /* CoreDataService.swift */; };
 		00B775742C43BFFA0063BAAF /* NSManagedObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B775732C43BFFA0063BAAF /* NSManagedObjectExtensions.swift */; };
+		00BE2EB62C45613D00CD6ECD /* PastInspectionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE2EB52C45613D00CD6ECD /* PastInspectionListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		00B775662C43AFD90063BAAF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		00B775682C43B3850063BAAF /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		00B775732C43BFFA0063BAAF /* NSManagedObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectExtensions.swift; sourceTree = "<group>"; };
+		00BE2EB52C45613D00CD6ECD /* PastInspectionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastInspectionListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				00A24BD32C43253F00B00085 /* InspectionQATableViewCell.swift */,
 				002E62652C442FA800BD37E6 /* HomeViewController.swift */,
 				002E62672C44534E00BD37E6 /* PastInspectionListViewController.swift */,
+				00BE2EB52C45613D00CD6ECD /* PastInspectionListTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				00B775742C43BFFA0063BAAF /* NSManagedObjectExtensions.swift in Sources */,
 				00B775652C43AE8D0063BAAF /* Utility.swift in Sources */,
 				00A24B822C42E3C200B00085 /* SceneDelegate.swift in Sources */,
+				00BE2EB62C45613D00CD6ECD /* PastInspectionListTableViewCell.swift in Sources */,
 				00A24BCA2C43074600B00085 /* InspectionViewModel.swift in Sources */,
 				00B775692C43B3850063BAAF /* CoreDataService.swift in Sources */,
 				00A24BC62C42F72B00B00085 /* CodableExtensions.swift in Sources */,

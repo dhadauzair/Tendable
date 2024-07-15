@@ -208,6 +208,33 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lb5-ZT-a6g">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PastInspectionListTableViewCell" id="LM0-jI-OkE" customClass="PastInspectionListTableViewCell" customModule="Tendable" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LM0-jI-OkE" id="uAt-7Q-kkr">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OI-0h-8q3">
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="353" height="21.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8OI-0h-8q3" firstAttribute="leading" secondItem="uAt-7Q-kkr" secondAttribute="leadingMargin" id="GnF-hH-0OJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8OI-0h-8q3" secondAttribute="trailing" id="g7S-X0-RFI"/>
+                                                <constraint firstItem="8OI-0h-8q3" firstAttribute="top" secondItem="uAt-7Q-kkr" secondAttribute="topMargin" id="gug-w6-P7R"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8OI-0h-8q3" secondAttribute="bottom" id="j70-DZ-ZLI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="8OI-0h-8q3" id="DLW-p2-lUb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="QTb-NB-aHn" id="6Jr-03-aI8"/>
                                     <outlet property="delegate" destination="QTb-NB-aHn" id="kYa-LL-Oma"/>
@@ -229,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipb-oR-ev2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3409" y="-23"/>
+            <point key="canvasLocation" x="3405" y="-33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uVK-Ig-Pp7">

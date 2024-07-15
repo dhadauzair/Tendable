@@ -46,7 +46,7 @@ final class CoreDataService: NSObject {
         return nil
     }
     
-    func getInspections(_ userMailId: String) -> [TendableInspectionsEntity]? {
+    func getInspectionsEntity(_ userMailId: String) -> [TendableInspectionsEntity]? {
         let fetchRequest = NSFetchRequest<TendableInspectionsEntity>(entityName: "TendableInspectionsEntity")
         // Create and set the predicate
         let predicate = NSPredicate(format: "email == %@", userMailId)
@@ -157,6 +157,12 @@ final class CoreDataService: NSObject {
         answerChoicesEntity.name = choice.name
         answerChoicesEntity.score = choice.score ?? 0.0
         return answerChoicesEntity
+    }
+    
+    func getAllSavedInspections(inspectionEntity: [TendableInspectionsEntity]) -> [Inspection] {
+        var allSavedInspection = [Inspection]()
+        inspectionEntity.forEach({ allSavedInspection.append(getInspectionFromInspectionEntity(inspectionEntity: $0)) })
+        return allSavedInspection
     }
     
     func getInspectionFromInspectionEntity(inspectionEntity: TendableInspectionsEntity) -> Inspection {

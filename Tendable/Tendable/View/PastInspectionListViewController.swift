@@ -10,6 +10,8 @@ import UIKit
 class PastInspectionListViewController: UIViewController {
 
     let viewModel = PastInspectionListViewModel()
+    var pastSavedInspections =  [Inspection]()
+    
     @IBOutlet weak var pastInspectionListTableView: UITableView!
     
     override func viewDidLoad() {
@@ -19,7 +21,7 @@ class PastInspectionListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        getPastInspections()
+//        getPastInspections()
     }
     
     func getPastInspections() {
@@ -37,17 +39,19 @@ class PastInspectionListViewController: UIViewController {
 // MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension PastInspectionListViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return pastSavedInspections.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PastInspectionListTableViewCell.identifier, for: indexPath) as? PastInspectionListTableViewCell else {
+            return UITableViewCell()
+        }
+        guard let areaName = pastSavedInspections[indexPath.row].area?.name, let inspectionId = pastSavedInspections[indexPath.row].id else {
+            return cell
+        }
+        cell.configureCell(inspectionAreaName: "Area Name: " + areaName + " Inspection ID:" + " \(inspectionId)")
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
