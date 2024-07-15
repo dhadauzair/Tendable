@@ -35,7 +35,7 @@ enum EndpointService {
         case .submitInspection:
             return APIBaseService.environment.rawValue + "/api/inspections/submit"
         case .randomInspections:
-            return APIBaseService.environment.rawValue + "/api/generate_random_inspections/"
+            return APIBaseService.environment.rawValue + "/api/generate_random_inspections/10"
         case .register:
             return APIBaseService.environment.rawValue + "/api/register"
         }

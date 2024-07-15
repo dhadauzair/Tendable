@@ -10,9 +10,12 @@ import UIKit
 class InspectionViewController: UIViewController {
 
     @IBOutlet weak var inspectionTableView: UITableView!
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var saveDraftButton: UIButton!
     
     var viewModel = InspectionViewModel()
     var inspection: Inspection?
+    var isFromPastInspection = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +24,22 @@ class InspectionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        startNewInspection()
+        if isFromPastInspection {
+            guard let inspection = inspection else {
+                submitButton.isUserInteractionEnabled = false
+                saveDraftButton.isUserInteractionEnabled = false
+                return
+            }
+            if inspection.isSubmitted {
+                submitButton.isUserInteractionEnabled = false
+                saveDraftButton.isUserInteractionEnabled = false
+            } else {
+                submitButton.isUserInteractionEnabled = true
+                saveDraftButton.isUserInteractionEnabled = true
+            }
+        } else {
+            startNewInspection()
+        }
     }
     
     func startNewInspection() {

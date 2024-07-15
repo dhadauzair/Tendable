@@ -10,6 +10,8 @@ import UIKit
 class PastInspectionListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
+    var inspection = Inspection()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,7 +23,8 @@ class PastInspectionListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(inspectionAreaName: String) {
-        titleLabel.text = inspectionAreaName
+    func configureCell(inspection: Inspection) {
+        self.inspection = inspection
+        titleLabel.text = "Area: \(inspection.area?.name ?? "")" + " Inspection ID: \(inspection.id ?? 0)"
     }
 }

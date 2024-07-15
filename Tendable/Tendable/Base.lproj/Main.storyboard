@@ -211,6 +211,8 @@
                     </view>
                     <connections>
                         <outlet property="inspectionTableView" destination="ypR-gA-ts0" id="t8y-wC-jbi"/>
+                        <outlet property="saveDraftButton" destination="Gts-qb-HG6" id="E5D-0Y-Dg4"/>
+                        <outlet property="submitButton" destination="GF3-Yg-Aoj" id="Nh2-dd-E3J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8b-Zk-Nnq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
