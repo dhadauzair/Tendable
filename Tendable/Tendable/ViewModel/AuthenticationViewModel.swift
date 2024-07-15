@@ -17,5 +17,14 @@ class AuthenticationViewModel {
         }
         APIBaseService.shared.request(.loginUser, body: dictionaryValues, completion: completion)
     }
+    
+    func register(email: String, password: String, completion: @escaping (Result<BoolResponse, Error>) -> Void) {
+        let user = User(email: email, password: password)
+        guard let dictionaryValues = user.dictionary else {
+            print("Unable to convert User to Dictionary in AuthenticationViewModel: Register")
+            return
+        }
+        APIBaseService.shared.request(.register, body: dictionaryValues, completion: completion)
+    }
 }
 

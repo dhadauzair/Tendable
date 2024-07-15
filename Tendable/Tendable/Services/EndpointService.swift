@@ -21,6 +21,7 @@ enum HTTPMethod: String {
 
 enum EndpointService {
     case loginUser
+    case register
     case startInspection
     case submitInspection
     case randomInspections
@@ -35,6 +36,8 @@ enum EndpointService {
             return APIBaseService.environment.rawValue + "/api/inspections/submit"
         case .randomInspections:
             return APIBaseService.environment.rawValue + "/api/generate_random_inspections/"
+        case .register:
+            return APIBaseService.environment.rawValue + "/api/register"
         }
     }
     
@@ -44,7 +47,7 @@ enum EndpointService {
     
     var httpMethod: HTTPMethod {
         switch self {
-        case .loginUser, .submitInspection:
+        case .loginUser, .submitInspection, .register:
             return .post
         case .startInspection, .randomInspections:
             return .get
