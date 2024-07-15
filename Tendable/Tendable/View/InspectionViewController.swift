@@ -96,6 +96,10 @@ class InspectionViewController: UIViewController {
         }
     }
     
+    @IBAction func didSelectSaveDraftButton(_ sender: Any) {
+    }
+    
+    
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource

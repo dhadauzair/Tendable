@@ -72,3 +72,9 @@ final class APIBaseService {
 struct BoolResponse: Codable {
     let success: Bool
 }
+
+extension Error {
+    var errorCode:Int {
+        return (self as NSError).code
+    }
+}

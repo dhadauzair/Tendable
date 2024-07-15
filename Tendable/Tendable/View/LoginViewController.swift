@@ -30,7 +30,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func didSelectLoginButton(_ sender: Any) {
         guard let email = emailTextField.text, let password = passwordTextField.text, !email.isEmpty, !password.isEmpty else { return }
-//        viewModel.login(email: "test@test.com", password: "test") { [weak self] result in
         viewModel.login(email: email, password: password) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
@@ -38,10 +37,28 @@ class LoginViewController: UIViewController {
                     Utility.sharedInstance.saveLoggedInUser(emailId: self?.emailTextField.text ?? "")
                     CoreDataService.sharedInstance.saveUserEntity(userMailId: self?.emailTextField.text ?? "")
                     self?.showAlert(title:Constants.CommonLocalisations.appNameTitle, message: Constants.CommonLocalisations.loginSuccessTitle, actionTitle: nil) {
-//                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//                        let inspectionViewController = storyBoard.instantiateViewController(withIdentifier: InspectionViewController.identifier) as! InspectionViewController
-//                        self?.navigationController?.pushViewController(inspectionViewController, animated: true)
                         self?.showHomeView()
+                    }
+                case .failure(let error):
+                    if error.errorCode == 400 {
+                        self?.showAlert(title: "Error", message: "email or password fields are missing", actionTitle: Constants.CommonLocalisations.okTitle)
+                    } else if error.errorCode == 401 {
+                        self?.showAlert(title: "Error", message: "user does not exist or the credentials are incorrect", actionTitle: Constants.CommonLocalisations.okTitle)
+                    }
+                }
+            }
+        }
+    }
+    
+    @IBAction func didSelectRegisterButton(_ sender: Any) {
+        guard let email = emailTextField.text, let password = passwordTextField.text, !email.isEmpty, !password.isEmpty else { return }
+        viewModel.register(email: email, password: password) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    self?.showAlert(title:Constants.CommonLocalisations.appNameTitle, message: Constants.CommonLocalisations.registerSuccessTitle, actionTitle: nil) {
+                        self?.emailTextField.text = ""
+                        self?.passwordTextField.text = ""
                     }
                     print("Success")
                 case .failure(let error):
@@ -50,4 +67,5 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
 }

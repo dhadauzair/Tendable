@@ -180,22 +180,32 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GF3-Yg-Aoj">
-                                <rect key="frame" x="157.66666666666666" y="783.66666666666663" width="78" height="34.333333333333371"/>
+                                <rect key="frame" x="255.66666666666663" y="783.66666666666663" width="78" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                                 <connections>
                                     <action selector="didSelctSubmitButton:" destination="YkC-XE-qaY" eventType="touchUpInside" id="XSQ-EO-bUl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gts-qb-HG6">
+                                <rect key="frame" x="46.333333333333343" y="783.66666666666663" width="104" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save Draft"/>
+                                <connections>
+                                    <action selector="didSelectSaveDraftButton:" destination="YkC-XE-qaY" eventType="touchUpInside" id="sJ4-X9-VCf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FgG-Ah-19S"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="GF3-Yg-Aoj" firstAttribute="centerX" secondItem="FgG-Ah-19S" secondAttribute="centerX" id="4rK-3L-TT1"/>
+                            <constraint firstItem="GF3-Yg-Aoj" firstAttribute="centerX" secondItem="FgG-Ah-19S" secondAttribute="centerX" multiplier="1.5" id="4rK-3L-TT1"/>
                             <constraint firstItem="ypR-gA-ts0" firstAttribute="leading" secondItem="FgG-Ah-19S" secondAttribute="leading" id="a85-oI-Rd9"/>
                             <constraint firstItem="FgG-Ah-19S" firstAttribute="trailing" secondItem="ypR-gA-ts0" secondAttribute="trailing" id="bXZ-cH-qkb"/>
                             <constraint firstItem="GF3-Yg-Aoj" firstAttribute="top" secondItem="ypR-gA-ts0" secondAttribute="bottom" constant="10" id="bcC-jJ-fld"/>
+                            <constraint firstItem="Gts-qb-HG6" firstAttribute="centerX" secondItem="FgG-Ah-19S" secondAttribute="centerX" multiplier="0.5" id="eef-20-07Z"/>
                             <constraint firstItem="ypR-gA-ts0" firstAttribute="top" secondItem="FgG-Ah-19S" secondAttribute="top" id="sKS-Ga-nv1"/>
+                            <constraint firstItem="Gts-qb-HG6" firstAttribute="top" secondItem="ypR-gA-ts0" secondAttribute="bottom" constant="10" id="scY-HA-wbs"/>
                             <constraint firstItem="GF3-Yg-Aoj" firstAttribute="bottom" secondItem="FgG-Ah-19S" secondAttribute="bottom" id="xPg-JP-6Bj"/>
                         </constraints>
                     </view>
@@ -220,14 +230,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PastInspectionListTableViewCell" id="LM0-jI-OkE" customClass="PastInspectionListTableViewCell" customModule="Tendable" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="42.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LM0-jI-OkE" id="uAt-7Q-kkr">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="42.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OI-0h-8q3">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="353" height="20.666666666666671"/>
+                                                    <rect key="frame" x="20" y="11" width="353" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
