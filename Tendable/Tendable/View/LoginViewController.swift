@@ -37,6 +37,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didSelectLoginButton(_ sender: Any) {
+        guard let email = emailTextField.text, let password = passwordTextField.text, isEmailValid(emailId: email), isPasswordValid(password: password) else { return }
         viewModel.login(email: email, password: password) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
