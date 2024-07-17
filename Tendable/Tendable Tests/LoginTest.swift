@@ -24,4 +24,22 @@ final class LoginTest: XCTestCase {
     func test_is_valid_password() {
         XCTAssertEqual(true, loginViewController.isPasswordValid(password: "123"))
     }
+    
+    func test_is_valid_when_login_fail() {
+        XCTAssertEqual(true, loginViewController.userLoginOrRegistrationFailed(errorCode: 400, WithEndpoint: .loginUser))
+        XCTAssertEqual(true, loginViewController.userLoginOrRegistrationFailed(errorCode: 401, WithEndpoint: .loginUser))
+    }
+    
+    func test_is_valid_when_login_success() {
+        XCTAssertEqual(false, loginViewController.userLoginOrRegistrationFailed(errorCode: 200, WithEndpoint: .loginUser))
+    }
+    
+    func test_is_valid_when_registration_fail() {
+        XCTAssertEqual(true, loginViewController.userLoginOrRegistrationFailed(errorCode: 400, WithEndpoint: .loginUser))
+        XCTAssertEqual(true, loginViewController.userLoginOrRegistrationFailed(errorCode: 401, WithEndpoint: .loginUser))
+    }
+    
+    func test_is_valid_when_registraion_success() {
+        XCTAssertEqual(false, loginViewController.userLoginOrRegistrationFailed(errorCode: 200, WithEndpoint: .loginUser))
+    }
 }

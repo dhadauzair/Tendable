@@ -36,6 +36,28 @@ class LoginViewController: UIViewController {
         return !password.isEmpty
     }
     
+    func userLoginOrRegistrationFailed(errorCode: Int, WithEndpoint endpoint: EndpointService) -> Bool {
+        var isFailure = false
+        switch errorCode {
+        case 400:
+            self.showAlert(title: "Error", message: "email or password fields are missing", actionTitle: Constants.CommonLocalisations.okTitle)
+            isFailure = true
+        case 401:
+            switch endpoint {
+            case .loginUser:
+                self.showAlert(title: "Error", message: "user does not exist or the credentials are incorrect", actionTitle: Constants.CommonLocalisations.okTitle)
+                isFailure = true
+            case .register:
+                self.showAlert(title: "Error", message: "user already exists", actionTitle: Constants.CommonLocalisations.okTitle)
+            default:
+                break
+            }
+        default:
+            break
+        }
+        return isFailure
+    }
+    
     @IBAction func didSelectLoginButton(_ sender: Any) {
         guard let email = emailTextField.text, let password = passwordTextField.text, isEmailValid(emailId: email), isPasswordValid(password: password) else { return }
         viewModel.login(email: email, password: password) { [weak self] result in
@@ -48,18 +70,14 @@ class LoginViewController: UIViewController {
                         self?.showHomeView()
                     }
                 case .failure(let error):
-                    if error.errorCode == 400 {
-                        self?.showAlert(title: "Error", message: "email or password fields are missing", actionTitle: Constants.CommonLocalisations.okTitle)
-                    } else if error.errorCode == 401 {
-                        self?.showAlert(title: "Error", message: "user does not exist or the credentials are incorrect", actionTitle: Constants.CommonLocalisations.okTitle)
-                    }
+                    _ = self?.userLoginOrRegistrationFailed(errorCode: error.errorCode,WithEndpoint: .loginUser)
                 }
             }
         }
     }
     
     @IBAction func didSelectRegisterButton(_ sender: Any) {
-        guard let email = emailTextField.text, let password = passwordTextField.text, !email.isEmpty, !password.isEmpty else { return }
+        guard let email = emailTextField.text, let password = passwordTextField.text, isEmailValid(emailId: email), isPasswordValid(password: password) else { return }
         viewModel.register(email: email, password: password) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
@@ -70,7 +88,7 @@ class LoginViewController: UIViewController {
                     }
                     print("Success")
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    _ = self?.userLoginOrRegistrationFailed(errorCode: error.errorCode, WithEndpoint: .register)
                 }
             }
         }
