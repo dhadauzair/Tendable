@@ -16,9 +16,6 @@
 		00A24B8A2C42E3C200B00085 /* Tendable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00A24B882C42E3C200B00085 /* Tendable.xcdatamodeld */; };
 		00A24B8C2C42E3C400B00085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00A24B8B2C42E3C400B00085 /* Assets.xcassets */; };
 		00A24B8F2C42E3C400B00085 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 00A24B8E2C42E3C400B00085 /* Base */; };
-		00A24B9A2C42E3C500B00085 /* TendableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24B992C42E3C500B00085 /* TendableTests.swift */; };
-		00A24BA42C42E3C500B00085 /* TendableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BA32C42E3C500B00085 /* TendableUITests.swift */; };
-		00A24BA62C42E3C500B00085 /* TendableUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BA52C42E3C500B00085 /* TendableUITestsLaunchTests.swift */; };
 		00A24BB82C42E52400B00085 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BB72C42E52400B00085 /* LoginViewController.swift */; };
 		00A24BBC2C42F24F00B00085 /* APIBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BBB2C42F24F00B00085 /* APIBaseService.swift */; };
 		00A24BBE2C42F2CF00B00085 /* EndpointService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A24BBD2C42F2CF00B00085 /* EndpointService.swift */; };
@@ -36,17 +33,12 @@
 		00B775692C43B3850063BAAF /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B775682C43B3850063BAAF /* CoreDataService.swift */; };
 		00B775742C43BFFA0063BAAF /* NSManagedObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B775732C43BFFA0063BAAF /* NSManagedObjectExtensions.swift */; };
 		00BE2EB62C45613D00CD6ECD /* PastInspectionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE2EB52C45613D00CD6ECD /* PastInspectionListTableViewCell.swift */; };
+		00DD97092C470415004EC26F /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD97082C470415004EC26F /* LoginTest.swift */; };
+		00DD970B2C4705A0004EC26F /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD970A2C4705A0004EC26F /* CommonExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00A24B962C42E3C500B00085 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00A24B742C42E3C200B00085 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 00A24B7B2C42E3C200B00085;
-			remoteInfo = Tendable;
-		};
-		00A24BA02C42E3C500B00085 /* PBXContainerItemProxy */ = {
+		00DD97022C47037A004EC26F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00A24B742C42E3C200B00085 /* Project object */;
 			proxyType = 1;
@@ -67,11 +59,6 @@
 		00A24B8B2C42E3C400B00085 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00A24B8E2C42E3C400B00085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00A24B902C42E3C400B00085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00A24B952C42E3C500B00085 /* TendableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TendableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00A24B992C42E3C500B00085 /* TendableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TendableTests.swift; sourceTree = "<group>"; };
-		00A24B9F2C42E3C500B00085 /* TendableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TendableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00A24BA32C42E3C500B00085 /* TendableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TendableUITests.swift; sourceTree = "<group>"; };
-		00A24BA52C42E3C500B00085 /* TendableUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TendableUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00A24BB72C42E52400B00085 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		00A24BBB2C42F24F00B00085 /* APIBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBaseService.swift; sourceTree = "<group>"; };
 		00A24BBD2C42F2CF00B00085 /* EndpointService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointService.swift; sourceTree = "<group>"; };
@@ -89,6 +76,10 @@
 		00B775682C43B3850063BAAF /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		00B775732C43BFFA0063BAAF /* NSManagedObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectExtensions.swift; sourceTree = "<group>"; };
 		00BE2EB52C45613D00CD6ECD /* PastInspectionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastInspectionListTableViewCell.swift; sourceTree = "<group>"; };
+		00DD96FE2C47037A004EC26F /* Tendable Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tendable Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00DD97072C470414004EC26F /* Tendable Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tendable Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		00DD97082C470415004EC26F /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		00DD970A2C4705A0004EC26F /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,14 +90,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00A24B922C42E3C500B00085 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00A24B9C2C42E3C500B00085 /* Frameworks */ = {
+		00DD96FB2C47037A004EC26F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -120,8 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				00A24B7E2C42E3C200B00085 /* Tendable */,
-				00A24B982C42E3C500B00085 /* TendableTests */,
-				00A24BA22C42E3C500B00085 /* TendableUITests */,
+				00DD96FF2C47037A004EC26F /* Tendable Tests */,
 				00A24B7D2C42E3C200B00085 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,8 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				00A24B7C2C42E3C200B00085 /* Tendable.app */,
-				00A24B952C42E3C500B00085 /* TendableTests.xctest */,
-				00A24B9F2C42E3C500B00085 /* TendableUITests.xctest */,
+				00DD96FE2C47037A004EC26F /* Tendable Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,23 +135,6 @@
 				00A24B882C42E3C200B00085 /* Tendable.xcdatamodeld */,
 			);
 			path = Tendable;
-			sourceTree = "<group>";
-		};
-		00A24B982C42E3C500B00085 /* TendableTests */ = {
-			isa = PBXGroup;
-			children = (
-				00A24B992C42E3C500B00085 /* TendableTests.swift */,
-			);
-			path = TendableTests;
-			sourceTree = "<group>";
-		};
-		00A24BA22C42E3C500B00085 /* TendableUITests */ = {
-			isa = PBXGroup;
-			children = (
-				00A24BA32C42E3C500B00085 /* TendableUITests.swift */,
-				00A24BA52C42E3C500B00085 /* TendableUITestsLaunchTests.swift */,
-			);
-			path = TendableUITests;
 			sourceTree = "<group>";
 		};
 		00A24BB22C42E47200B00085 /* Model */ = {
@@ -224,6 +189,7 @@
 				00B775642C43AE8D0063BAAF /* Utility.swift */,
 				00B775662C43AFD90063BAAF /* Constants.swift */,
 				00B775732C43BFFA0063BAAF /* NSManagedObjectExtensions.swift */,
+				00DD970A2C4705A0004EC26F /* CommonExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -233,6 +199,15 @@
 			children = (
 			);
 			path = NSManagedObjectSubclasses;
+			sourceTree = "<group>";
+		};
+		00DD96FF2C47037A004EC26F /* Tendable Tests */ = {
+			isa = PBXGroup;
+			children = (
+				00DD97082C470415004EC26F /* LoginTest.swift */,
+				00DD97072C470414004EC26F /* Tendable Tests-Bridging-Header.h */,
+			);
+			path = "Tendable Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,41 +230,23 @@
 			productReference = 00A24B7C2C42E3C200B00085 /* Tendable.app */;
 			productType = "com.apple.product-type.application";
 		};
-		00A24B942C42E3C500B00085 /* TendableTests */ = {
+		00DD96FD2C47037A004EC26F /* Tendable Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00A24BAC2C42E3C500B00085 /* Build configuration list for PBXNativeTarget "TendableTests" */;
+			buildConfigurationList = 00DD97042C47037A004EC26F /* Build configuration list for PBXNativeTarget "Tendable Tests" */;
 			buildPhases = (
-				00A24B912C42E3C500B00085 /* Sources */,
-				00A24B922C42E3C500B00085 /* Frameworks */,
-				00A24B932C42E3C500B00085 /* Resources */,
+				00DD96FA2C47037A004EC26F /* Sources */,
+				00DD96FB2C47037A004EC26F /* Frameworks */,
+				00DD96FC2C47037A004EC26F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				00A24B972C42E3C500B00085 /* PBXTargetDependency */,
+				00DD97032C47037A004EC26F /* PBXTargetDependency */,
 			);
-			name = TendableTests;
-			productName = TendableTests;
-			productReference = 00A24B952C42E3C500B00085 /* TendableTests.xctest */;
+			name = "Tendable Tests";
+			productName = "Tendable Tests";
+			productReference = 00DD96FE2C47037A004EC26F /* Tendable Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		00A24B9E2C42E3C500B00085 /* TendableUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00A24BAF2C42E3C500B00085 /* Build configuration list for PBXNativeTarget "TendableUITests" */;
-			buildPhases = (
-				00A24B9B2C42E3C500B00085 /* Sources */,
-				00A24B9C2C42E3C500B00085 /* Frameworks */,
-				00A24B9D2C42E3C500B00085 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00A24BA12C42E3C500B00085 /* PBXTargetDependency */,
-			);
-			name = TendableUITests;
-			productName = TendableUITests;
-			productReference = 00A24B9F2C42E3C500B00085 /* TendableUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -304,12 +261,9 @@
 					00A24B7B2C42E3C200B00085 = {
 						CreatedOnToolsVersion = 15.4;
 					};
-					00A24B942C42E3C500B00085 = {
+					00DD96FD2C47037A004EC26F = {
 						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 00A24B7B2C42E3C200B00085;
-					};
-					00A24B9E2C42E3C500B00085 = {
-						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 						TestTargetID = 00A24B7B2C42E3C200B00085;
 					};
 				};
@@ -328,8 +282,7 @@
 			projectRoot = "";
 			targets = (
 				00A24B7B2C42E3C200B00085 /* Tendable */,
-				00A24B942C42E3C500B00085 /* TendableTests */,
-				00A24B9E2C42E3C500B00085 /* TendableUITests */,
+				00DD96FD2C47037A004EC26F /* Tendable Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -345,14 +298,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00A24B932C42E3C500B00085 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00A24B9D2C42E3C500B00085 /* Resources */ = {
+		00DD96FC2C47037A004EC26F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,6 +322,7 @@
 				00A24BC02C42F56A00B00085 /* AuthenticationViewModel.swift in Sources */,
 				002E62662C442FA800BD37E6 /* HomeViewController.swift in Sources */,
 				00A24B802C42E3C200B00085 /* AppDelegate.swift in Sources */,
+				00DD970B2C4705A0004EC26F /* CommonExtensions.swift in Sources */,
 				00A24BC22C42F5A300B00085 /* User.swift in Sources */,
 				00A24BBC2C42F24F00B00085 /* APIBaseService.swift in Sources */,
 				00A24BCC2C43089E00B00085 /* Inspection.swift in Sources */,
@@ -392,35 +339,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00A24B912C42E3C500B00085 /* Sources */ = {
+		00DD96FA2C47037A004EC26F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00A24B9A2C42E3C500B00085 /* TendableTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00A24B9B2C42E3C500B00085 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00A24BA62C42E3C500B00085 /* TendableUITestsLaunchTests.swift in Sources */,
-				00A24BA42C42E3C500B00085 /* TendableUITests.swift in Sources */,
+				00DD97092C470415004EC26F /* LoginTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		00A24B972C42E3C500B00085 /* PBXTargetDependency */ = {
+		00DD97032C47037A004EC26F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 00A24B7B2C42E3C200B00085 /* Tendable */;
-			targetProxy = 00A24B962C42E3C500B00085 /* PBXContainerItemProxy */;
-		};
-		00A24BA12C42E3C500B00085 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 00A24B7B2C42E3C200B00085 /* Tendable */;
-			targetProxy = 00A24BA02C42E3C500B00085 /* PBXContainerItemProxy */;
+			targetProxy = 00DD97022C47037A004EC26F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -619,79 +552,44 @@
 			};
 			name = Release;
 		};
-		00A24BAD2C42E3C500B00085 /* Debug */ = {
+		00DD97052C47037A004EC26F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DNS9G92MJ3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uzair.TendableTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uzair.Tendable-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Tendable Tests/Tendable Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tendable.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tendable";
 			};
 			name = Debug;
 		};
-		00A24BAE2C42E3C500B00085 /* Release */ = {
+		00DD97062C47037A004EC26F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DNS9G92MJ3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uzair.TendableTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uzair.Tendable-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Tendable Tests/Tendable Tests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tendable.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tendable";
-			};
-			name = Release;
-		};
-		00A24BB02C42E3C500B00085 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DNS9G92MJ3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uzair.TendableUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Tendable;
-			};
-			name = Debug;
-		};
-		00A24BB12C42E3C500B00085 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DNS9G92MJ3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uzair.TendableUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Tendable;
 			};
 			name = Release;
 		};
@@ -716,20 +614,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		00A24BAC2C42E3C500B00085 /* Build configuration list for PBXNativeTarget "TendableTests" */ = {
+		00DD97042C47037A004EC26F /* Build configuration list for PBXNativeTarget "Tendable Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00A24BAD2C42E3C500B00085 /* Debug */,
-				00A24BAE2C42E3C500B00085 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		00A24BAF2C42E3C500B00085 /* Build configuration list for PBXNativeTarget "TendableUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00A24BB02C42E3C500B00085 /* Debug */,
-				00A24BB12C42E3C500B00085 /* Release */,
+				00DD97052C47037A004EC26F /* Debug */,
+				00DD97062C47037A004EC26F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

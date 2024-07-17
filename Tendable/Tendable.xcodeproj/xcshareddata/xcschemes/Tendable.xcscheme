@@ -52,6 +52,17 @@
                ReferencedContainer = "container:Tendable.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "00DD96FD2C47037A004EC26F"
+               BuildableName = "Tendable Tests.xctest"
+               BlueprintName = "Tendable Tests"
+               ReferencedContainer = "container:Tendable.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -28,8 +28,15 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(homeViewController, animated: true)
     }
     
+    func isEmailValid(emailId: String) -> Bool {
+        return emailId.isValidEmail()
+    }
+    
+    func isPasswordValid(password: String) -> Bool {
+        return !password.isEmpty
+    }
+    
     @IBAction func didSelectLoginButton(_ sender: Any) {
-        guard let email = emailTextField.text, let password = passwordTextField.text, !email.isEmpty, !password.isEmpty else { return }
         viewModel.login(email: email, password: password) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
