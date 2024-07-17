@@ -112,6 +112,8 @@ class InspectionViewController: UIViewController {
                     }
                 }
             }
+        } else {
+            self.showAlert(title: "Error", message: "Please select all options", actionTitle: "Ok")
         }
     }
     
